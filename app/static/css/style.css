@@ -1,0 +1,41 @@
+    body{
+        background-color: #E84D0C;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 1em;
+        color: #FFC08A;  
+        
+    }
+
+    a{
+        color: #FFC08A;
+    }
+
+    .col-centered{
+    float: none;
+    margin: 0 auto;
+    }
+       
+    .tooltip-inner{
+        font-size: 20px;
+    }
+
+    .projects{
+        color:#FFCA5C;
+    }
+
+    .fa-heart{
+        color:#E80F0C;
+    }
+
+    .down{
+        position:fixed;bottom:15px;width:100%;
+    }
+
+
+
+.fa-heart{
+    color:#E80F0C;
+    width:50px;
+    height:20px;
+}
+

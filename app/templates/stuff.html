@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<div class="container">    
+      <a href="/"><p style="font-size:20px">Back</p></a>    
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">       
+    <div class="col-xs-4 col-sm-2 col-md-2">
+      <div class="row">
+        <button type="button" id="websites-bt" class="btn btn-warning" style="width:100px">
+            Websites
+          </button> 
+        </div>
+        <br>
+      <div class="row">
+        <button type="button" id="ideas-bt" class="btn btn-warning " style="width:100px">
+            Playground
+          </button> 
+      </div>       
+    </div>
+    <div class="col-xs-6 col-sm-10 col-md-10">
+      <div class="websites">
+      <div class="row">         
+          <h2 data-toggle="tooltip" data-placement="top" title="Hey, You can drag me!!" style="font-size:40px">
+            <a href="http://elobjetivista.com">
+            #elobjetivista
+            </a>   
+          </h2>         
+      </div>
+      <div class="row">    
+        <a href="http://itoutfits.com">
+          <h1  style="font-size:40px">
+           itOutfits
+          </h1>
+        </a>     
+      </div> 
+      <div class="row">    
+        <a href="http://bicimadmap.com">
+          <h1  style="font-size:40px">
+            BiciMadMap          
+          </h1>
+        </a>     
+      </div>
+      </div>
+      <div class="ideas">
+        <div class="row">
+        <a href="/stuff/crazyboxes">
+          <h4 style="font-size:40px">
+            Crazy Boxes
+          </h4>
+        </a>     
+      </div>
+    </div>      
+  </div>
+</div>
+
+{% endblock %}

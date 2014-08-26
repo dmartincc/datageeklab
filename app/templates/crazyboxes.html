@@ -1,0 +1,190 @@
+<html>
+<head>
+<title>Crazy Boxes</title>
+<link rel="stylesheet" href="/static/css/foundation.min.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>    
+<style>
+
+	body{
+		background-color: #E80C7A;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 2.4em;
+		color: #FFCDFF;  
+	}
+
+	label {
+		display: block;
+		font-size: .8em;
+	}
+
+	input,p, h1, h2 {
+		font-size: 1em;
+		font-family: 'Open Sans Condensed', sans-serif;
+		background-color: transparent;
+		text-align: center;
+		border-width: 0;
+		width: 100%;
+		margin: 0 0 .1em 0;
+		font-size: 1.5em;
+		color: white;
+	}
+
+	button{
+	background-color: #FFCDFF;
+	}
+
+	.box {
+		/* basics */
+		background-color: #FF0DFF;
+		color: #FFCDFF;   
+		/* rounded corners */
+	    -webkit-border-radius: 12px;
+	    border-radius: 12px; 
+	    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+	    padding: .8em .8em 1em;
+	    width: 8em;
+		margin: 0 auto;	
+		height:190px;		 
+	}
+
+	.shake {
+		-webkit-animation: shake 1s 2;
+		-moz-animation: shake 1s 2;
+		-ms-animation: shake 1s 2;
+		animation: shake 1s 2;
+	}
+	.hop {
+		-webkit-animation: hop 2s;
+		-moz-animation: hop 2s;
+		-ms-animation: hop 2s;
+		animation: hop 2s;
+	}
+	.spin {
+		-webkit-animation: spin 2s;
+		-moz-animation: spin 2s;
+		-ms-animation: spin 2s;
+		animation: spin 2s;
+	}
+	.grow {
+		z-index: 30;
+		-webkit-animation: grow 2s;
+		-moz-animation: grow 2s;
+		-ms-animation: grow 2s;
+		animation: grow 2s;
+	}
+
+	.hooray {
+		z-index: 20;
+		-webkit-animation: hooray 2s;
+		-moz-animation: hooray 2s;
+		-ms-animation: hooray 2s;
+		animation: hooray 2s;
+	}
+	
+@-webkit-keyframes shake {
+	0%, 100% {-webkit-transform: translateX(0);}
+	5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {-webkit-transform: translateX(-20px);}
+	10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% {-webkit-transform: translateX(20px);}
+}
+
+@-webkit-keyframes hop {
+	0% {-webkit-transform: translateX(0);}
+	12% {-webkit-transform: translateY(-100px) rotate(-20deg);}
+	25% {-webkit-transform: translateX(-20px);}
+	37% {-webkit-transform: translateY(-100px) rotate(20deg);}
+	50% {-webkit-transform: translateX(20px);}
+	62% {-webkit-transform: translateY(-100px) rotate(-20deg);}
+	75% {-webkit-transform: translateX(-20px);}
+	87% {-webkit-transform: translateY(-100px) rotate(20deg);}
+	100% {-webkit-transform: translateX(0);}
+}
+
+@-webkit-keyframes spin {
+	0% {-webkit-transform: rotate(0deg);}
+	8% {-webkit-transform: rotate(-50deg);}
+	12% {-webkit-transform: rotate(-50deg);}
+	100% {-webkit-transform: rotate(3600deg);}
+}
+
+@-webkit-keyframes grow {
+	0% { -webkit-transform: scale(1); }
+	75% { -webkit-transform: scale(2.5); }
+	90% { -webkit-transform: scale(0.6); }
+	93% { -webkit-transform: scale(1.4); }
+	95% { -webkit-transform: scale(0.8); }
+	97% { -webkit-transform: scale(1.2); }
+	100% { -webkit-transform: scale(1); }
+}
+
+@-webkit-keyframes hooray {
+	0% {-webkit-transform: translateX(0) translateY(0) scale(1, 1);}
+	10% {-webkit-transform: translateX(60px) translateY(-60px) scale(1.5, 1.5);}
+	20% {-webkit-transform: translateX(0) translateY(0) scale(.7, .7);}
+	30% {-webkit-transform: translateX(-60px) translateY(-60px) scale(1.5, 1.5);}
+	40% {-webkit-transform: translateX(0) translateY(0) scale(.7, .7);}
+	50% {-webkit-transform: translateX(60px) translateY(-60px) scale(1.5, 1.5);}
+	60% {-webkit-transform: translateX(0) translateY(0) scale(.7, .7);}
+	70% {-webkit-transform: translateX(-60px) translateY(-60px) scale(1.5, 1.5);}	
+	80% {-webkit-transform: translateX(0) translateY(0) scale(.7, .7);}
+	90% {-webkit-transform: translateX(60px) translateY(-60px) scale(1.5, 1.5);}
+	100% {-webkit-transform: translateX(0) translateY(0) scale(1, 1);}
+}
+
+</style>
+</head>
+<body>
+	<br>
+	<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-4 draggable">
+      <a href="/stuff"><p style="font-size:20px">Back</p></a>
+    </div>
+  	</div>	
+	<br>
+	<br>
+	<div class="row text-center">
+		<span data-tooltip class="has-tip" title="Tease the boxes a little bit and they will go crazy!!">
+			<h1>Crazy Boxes</h1>
+		</span>
+	</div>
+	<br>
+	<div class="row">
+		<div class="progress large-12 success round">
+			  <span class="meter" style="width:0%"></span>
+		</div>
+	</div>  
+	<br>
+	<div class="row">
+	<div class="large-4 columns">		
+			<div class="box move text-center">    
+		        <input id="qty" value="0"/></input>
+		        <button class="small radius" id="down" onclick="modify_qty(-1)">-1</button>
+		        <button class="small radius"  id="up" onclick="modify_qty(1)">+1</button>        
+		    </div>
+		     </div>
+		    <div class="large-4 columns">		
+		     <div class="box move text-center">       
+		        <h1 id="ten"></h1>          
+		    </div>
+		     </div>
+		    <div class="large-4 columns">		
+		     <div class="box draggable text-center">       
+		        <h2>This is <span id="change">cool</span></h2> 
+		    </div>
+		     </div>		
+	</div>
+	<script src="http://code.jquery.com/jquery-1.7.0.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.animateNumber.js"></script>
+	<script type="text/javascript" src="/static/js/counter.js"></script>
+	<script src="/static/js/foundation.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script src="/static/js/vendor/modernizr.js"></script> 
+</body> 
+<script>
+$(document).ready(main('#ten',10,10000));
+$(document).ready(move);
+$(document).ready(changer);
+$(document).ready(drag);
+$(document).ready(progressBarCrazy());
+$(document).ready(moves);
+</script>
+</html>
