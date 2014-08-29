@@ -54,7 +54,7 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
-var tooltip = d3.select(".chart").append("div")
+var tooltip = d3.select("body").append("div")
     .attr("class", "tip-d3")
     .style("opacity", 0);
 
