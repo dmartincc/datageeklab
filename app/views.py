@@ -21,6 +21,11 @@ def crazyboxes():
     return render_template('crazyboxes.html',
                             title="Crazy Boxes - Data Loves Good")
 
+@app.route('/stuff/logisticmap')
+def logisticmap():
+    return render_template('logisticMap.html',
+                            title="Logistic Map with D3.js - Data Loves Good")
+
 @app.route('/sitemap')
 def sitemap():
     url_root = request.url_root[:-1]

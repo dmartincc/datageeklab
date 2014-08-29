@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+
+body {
+  
+  background-color: white;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #B5B5B5;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  /*stroke: #B5B5B5;*/
+}
+
+.tip-d3 {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  pointer-events: none;
+  color:white;
+  background-color:black;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+
+.chart{
+  font: 10px sans-serif;
+}
+
+
+
+</style>
+<br>
+<div class="container">    
+      <a href="/stuff"><p style="font-size:20px">Back</p></a>    
+</div>
+<div class="container">       
+    <div class="col-xs-1 col-sm-1 col-md-1"></div>
+
+    <div class="col-xs-10 col-sm-10 col-md-10">
+      <div class="row">
+        <h1 style="color:#B5B5B5;font-size:50px">Logistic Map</h1>
+        <p style="color:black;;font-size:20px">Here it's presented the Logistic Map, a very simple population model which presents chaotics behaviours.</p>
+        <p style="color:black;"><a href="http://en.wikipedia.org/wiki/Logistic_map">Wikipedia</a></p>     
+      </div>
+      <div class="row">
+        <div class="chart"></div>      
+      </div>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/logisticmap.js"></script> 
+{% endblock %}
