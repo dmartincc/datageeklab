@@ -11,9 +11,9 @@ var logistic = function(){
             if (r < 1) {
                 type = "Population dies";
             } else if (r < 2) {
-                type = "Population approach (r-1)/r";
+                type = "Population approaches (r-1)/r";
             }else if (r < 3) {
-                type = "Population fluctuates and approach (r-1)/r";
+                type = "Population fluctuates and approaches (r-1)/r";
             } else if (r < 3.44949) {
                 type = "Permanent oscillation between two values";
             }  else if (r < 3.54409) {
